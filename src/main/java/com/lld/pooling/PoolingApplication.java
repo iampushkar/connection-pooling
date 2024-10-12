@@ -1,13 +1,20 @@
 package com.lld.pooling;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
 public class PoolingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PoolingApplication.class, args);
+		System.out.println("Prototyping Connection Pooling");
+		try {
+			Benchmark.benchmarkWithoutPooling();
+
+			ConnectionPool pool = new ConnectionPool();
+			Benchmark.benchmarkWithConnectionPooling(pool);
+			pool.shutdown();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
