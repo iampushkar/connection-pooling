@@ -21,10 +21,11 @@ Clone this repository:
    cd connection-pooling-benchmark
 ```
 
-### Example Output:
+### Example Output: 
+For 10K Iterations
 ```
-  Time taken without connection pooling: X ms
-  Time taken with connection pooling: Y ms
+  Time taken without connection pooling: 1142 ms
+  Time taken with connection pooling: 13 ms
 ```
 
 ## Benchmarking Results
