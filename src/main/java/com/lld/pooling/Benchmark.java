@@ -1,5 +1,7 @@
 package com.lld.pooling;
 
+import org.springframework.boot.autoconfigure.jdbc.JdbcConnectionDetails;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -17,7 +19,7 @@ public class Benchmark {
         }
 
         long endTime = System.currentTimeMillis();
-        System.out.println("Benchmarking without Pooling: " + (endTime - startTime));
+        System.out.println("Time Taken without Pooling: " + (endTime - startTime) + " ms");
     }
 
     public static void benchmarkWithConnectionPooling(ConnectionPool pool) throws SQLException, InterruptedException {
@@ -30,6 +32,6 @@ public class Benchmark {
         }
 
         long endTime = System.currentTimeMillis();
-        System.out.println("Benchmarking with Connection Pooling: " + (endTime - startTime));
+        System.out.println("Time Taken with Connection Pooling: " + (endTime - startTime) + " ms");
     }
 }

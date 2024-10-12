@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-    private static final String JDBC_URL = "jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1";  // H2 In-Memory Database
+    private static final String JDBC_URL = "jdbc:h2:mem:testdb";  // H2 In-Memory Database
     private static final String USER = "sa";  // Default H2 user
     private static final String PASSWORD = "";  // No password by default
 
