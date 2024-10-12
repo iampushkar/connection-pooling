@@ -1,7 +1,5 @@
 package com.lld.pooling;
 
-import org.springframework.boot.autoconfigure.jdbc.JdbcConnectionDetails;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 
