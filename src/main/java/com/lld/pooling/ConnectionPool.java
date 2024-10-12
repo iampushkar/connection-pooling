@@ -12,7 +12,7 @@ public class ConnectionPool {
 
     public ConnectionPool() throws SQLException {
         pool = new ArrayBlockingQueue<>(MAX_POOL_SIZE);
-        for (int i=0; i<MAX_POOL_SIZE; i++) {
+        for (int i = 0; i < MAX_POOL_SIZE; i++) {
             Connection connection = DBConnection.createConnection();
             pool.add(connection);
         }
@@ -23,7 +23,7 @@ public class ConnectionPool {
     }
 
     public void releaseConnection(Connection connection) throws SQLException {
-        if (null !=  connection && !connection.isClosed())
+        if (null != connection && !connection.isClosed())
             pool.offer(connection);
     }
 

@@ -10,7 +10,7 @@ public class Benchmark {
     public static void benchmarkWithoutPooling() throws SQLException {
         long startTime = System.currentTimeMillis();
 
-        for (int i=0; i<MAX_ITERATION; i++) {
+        for (int i = 0; i < MAX_ITERATION; i++) {
             Connection connection = DBConnection.createConnection();
             DBConnection.runQuery(connection);
             connection.close();
@@ -23,7 +23,7 @@ public class Benchmark {
     public static void benchmarkWithConnectionPooling(ConnectionPool pool) throws SQLException, InterruptedException {
         long startTime = System.currentTimeMillis();
 
-        for (int i=0; i<MAX_ITERATION; i++) {
+        for (int i = 0; i < MAX_ITERATION; i++) {
             Connection connection = pool.getConnection();
             DBConnection.runQuery(connection);
             pool.releaseConnection(connection);
