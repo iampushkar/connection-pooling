@@ -1,10 +1,10 @@
-# Prototyping Database Connection Pooling using BlockingQueue 
+## Prototyping Database Connection Pooling using BlockingQueue 
 
-This project benchmarks the performance of database connection pooling using an in-memory H2 database. It compares the execution time of database operations with and without connection pooling, focusing specifically on the overhead associated with establishing and closing connections.
+This project is a simple prototype to benchmark the performance of database connection pooling using an in-memory H2 database. It compares the execution time of database operations with and without connection pooling, focusing specifically on the overhead associated with establishing and closing connections.
 
 ### Introduction
 
-In modern applications, database connection pooling is essential for performance optimization. This project benchmarks the time taken to execute a database operation (simulated using `SELECT 1`) across two scenarios:
+This project benchmarks the time taken to execute a database operation (simulated using `SELECT 1`) across two scenarios:
 1. Without connection pooling (creating and closing a new connection for each operation).
 2. With connection pooling (reusing existing connections).
 
